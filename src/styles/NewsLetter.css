@@ -1,0 +1,264 @@
+/* Newsletter Container */
+.newsletter-container {
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Fade-In Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Newsletter Body */
+.newsletter-body {
+    width: 70%;
+    padding: 8vh 5vw;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 8px 32px;
+    display: flex;
+    border-radius: 0.8rem;
+    background: white;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.newsletter-body:hover {
+    transform: translateY(-5px);
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 10px 40px;
+}
+
+/* Newsletter Text */
+.newsletter-text {
+    display: flex;
+    align-items: start;
+    gap: 15px;
+    width: 50%;
+}
+
+.newsletter-text .food-icon {
+    font-size: 3.5rem;
+    color: #ff5722;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Icon Hover Effect */
+.newsletter-text .food-icon:hover {
+    transform: scale(1.1) rotate(10deg);
+}
+
+/* Text Section */
+.newsletter-text span {
+    width: 80%;
+    text-align: left;
+}
+
+.newsletter-text span h4 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.newsletter-text span p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Input Section */
+.newsletter-input-body {
+    margin-left: 5%;
+    width: 50%;
+}
+
+/* Input Box */
+.newsletter-input {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border: 2px solid #ff5722;
+    padding: 5px;
+    border-radius: 0.4rem;
+    transition: border-color 0.3s ease-in-out;
+}
+
+/* Input Focus Effect */
+.newsletter-input:hover {
+    border-color: #ff9800;
+}
+
+/* Input Content */
+.newsletter-input span {
+    width: 75%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Mail Icon */
+.newsletter-input span .mail-icon {
+    color: #ff5722;
+    font-size: 1.2rem;
+}
+
+/* Input Field */
+.newsletter-input span input {
+    height: 7vh;
+    border: none;
+    width: 90%;
+    font-size: 1rem;
+    padding-left: 5px;
+}
+
+/* Input Focus */
+.newsletter-input span input:focus {
+    outline: none;
+}
+
+/* Subscribe Button */
+.newsletter-input button {
+    width: 25%;
+    height: 7vh;
+    background-color: #ff5722;
+    border: 2px solid #ff5722;
+    color: white;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+/* Button Hover Effect */
+.newsletter-input button:hover {
+    background-color: #ff9800;
+    transform: scale(1.05);
+}
+
+/* Confirmation Text */
+.newsletter-input-body p {
+    font-size: 0.9rem;
+    display: flex;
+    align-items: start;
+    gap: 5px;
+    color: #777;
+    margin-top: 8px;
+}
+
+/* Tick Icon */
+.newsletter-input-body p .tick-icon {
+    font-size: 1.2rem;
+    color: #28a745;
+    animation: tickScale 0.5s ease-in-out infinite alternate;
+}
+
+/* Tick Icon Animation */
+@keyframes tickScale {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.2);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .newsletter-body {
+        width: 85%;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .newsletter-text {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .newsletter-input-body {
+        width: 100%;
+        margin-top: 3vh;
+        text-align: center;
+    }
+
+    .newsletter-input {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .newsletter-container {
+        height: auto;
+        padding: 5vh 0;
+    }
+
+    .newsletter-body {
+        width: 90%;
+    }
+
+    .newsletter-text .food-icon {
+        font-size: 3rem;
+    }
+
+    .newsletter-text span h4 {
+        font-size: 1.3rem;
+    }
+
+    .newsletter-text span p {
+        font-size: 0.8rem;
+    }
+
+    .newsletter-input span input {
+        font-size: 0.9rem;
+    }
+
+    .newsletter-input button {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .newsletter-body {
+        padding: 5vh 3vw;
+    }
+
+    .newsletter-text .food-icon {
+        font-size: 2.5rem;
+    }
+
+    .newsletter-text span h4 {
+        font-size: 1.2rem;
+    }
+
+    .newsletter-text span p {
+        font-size: 0.75rem;
+    }
+
+    .newsletter-input {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .newsletter-input span {
+        width: 100%;
+    }
+
+    .newsletter-input button {
+        width: 100%;
+        margin-top: 8px;
+    }
+
+    .newsletter-input-body p {
+        font-size: 0.75rem;
+    }
+}

@@ -1,0 +1,113 @@
+.Navbar {
+    display: flex;
+    align-items: center;
+    height: 12vh;
+    justify-content: space-between;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+    background-color: rgb(230, 12, 12); /* Changed Navbar Color */
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    padding: 0 3vw;
+    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.Navbar h3 {
+    font-family: 'Whisper', cursive;
+    font-size: 2.3rem;
+    color: #fff;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+}
+
+.Navbar h3:hover {
+    color: #fffa65;
+}
+
+.Navbar .nav-options {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.Navbar ul {
+    display: flex;
+    gap: 30px;
+}
+
+.Navbar ul li {
+    list-style: none;
+    cursor: pointer;
+    color: #f1f1f1;
+    transition: color 0.3s ease-in-out;
+}
+
+.Navbar ul li:hover {
+    color: #fffa65;
+}
+
+/* Fixed incorrect selector */
+.Navbar ul a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.nav-search {
+    display: flex;
+    align-items: center;
+    border: 1px solid #fff;
+    padding: 3px;
+    border-radius: 2rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: background-color 0.3s ease-in-out, border 0.3s ease-in-out;
+}
+
+.nav-search:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.nav-search-icon {
+    color: #fff;
+    padding-left: 5px;
+}
+
+.nav-search span input {
+    border: none;
+    background: transparent;
+    color: #fff;
+}
+
+.nav-search span input::placeholder {
+    color: #ddd;
+}
+
+.nav-search span input:focus {
+    outline: none;
+}
+
+.nav-search button {
+    border-radius: 2rem;
+    padding: 0 10px;
+    border: none;
+    background-color: #fffa65;
+    color: #333;
+    height: 4vh;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.nav-search button:hover {
+    background-color: #fff;
+}
